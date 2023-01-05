@@ -4,7 +4,7 @@
 }
 
 #Menu {
-    position: absolute;
+    position: relative;
     width: 80%;
     left: 10%;
     border-radius: 0 0 20px 20px;
@@ -35,4 +35,27 @@
 
 .Home {
     margin-right: 20%;
+}
+
+.bar-1,
+.bar-2,
+.bar-3 {
+    cursor: pointer;
+    width: 35px;
+    height: 5px;
+    background-color: #000;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change.bar-1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change.bar-2 {
+    opacity: 0;
+}
+
+.change.bar-3 {
+    transform: translate(0, -11px) rotate(45deg);
 }
