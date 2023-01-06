@@ -3,19 +3,28 @@
     padding: 0;
 }
 
+main {
+    height: 100vh;
+}
+
 #Menu {
-    position: relative;
-    width: 80%;
+    /* position: absolute; */
+    /* width: 80%; */
+    height: 5%;
     left: 10%;
-    border-radius: 0 0 20px 20px;
+    /* border-radius: 0 0 20px 20px; */
+
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-bottom-color: black;
 
     font-size: 24px;
     font-family: monospace;
-    background-color: #000;
-    color: #fff;
+    background-color: rgb(255, 255, 255);
     padding: 10px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 #Menu div {
@@ -23,24 +32,30 @@
 }
 
 #Menu a {
-    color: #fff;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     padding: 10px;
 }
 
 #Menu a:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: rgb(78, 76, 76);
+    color: rgb(163, 128, 128);
+    border-radius: 40%;
 }
 
 .Home {
     margin-right: 20%;
 }
 
+#content {
+    position: absolute;
+    top: 10%;
+    cursor: pointer;
+}
+
 .bar-1,
 .bar-2,
 .bar-3 {
-    cursor: pointer;
     width: 35px;
     height: 5px;
     background-color: #000;
