@@ -3,8 +3,8 @@ const childMenu = document.querySelectorAll(".icon-menu .icon")
 
 btnMenu.addEventListener('click', (e) => {
     childMenu.forEach((item) => {
-        item.classList.toggle("change")
-        if (item.classList.contains('change')) {
+        e.target.classList.toggle("change")
+        if (e.target.classList.contains('change')) {
             document.body.style.backgroundColor = "rgba(0,0,0,0.5)"
         }
         else {
