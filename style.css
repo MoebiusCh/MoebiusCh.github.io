@@ -1,76 +1,239 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
-main {
-    height: 100vh;
-}
-
-#Menu {
-    /* position: absolute; */
-    /* width: 80%; */
-    height: 5%;
-    left: 10%;
-    /* border-radius: 0 0 20px 20px; */
-
-    border-bottom-style: solid;
-    border-width: 1px;
-    border-bottom-color: black;
-
-    font-size: 24px;
-    font-family: monospace;
-    background-color: rgb(255, 255, 255);
-    padding: 10px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-#Menu div {
-    display: inline-block;
-}
-
-#Menu a {
-    color: rgb(0, 0, 0);
+a {
     text-decoration: none;
-    padding: 10px;
 }
 
-#Menu a:hover {
-    background-color: rgb(78, 76, 76);
-    color: rgb(163, 128, 128);
-    border-radius: 40%;
+body>.container.body {
+    height: 100vh;
+    width: auto;
+    overflow-x: hidden;
 }
 
-.Home {
-    margin-right: 20%;
+header #menu {
+    position: relative;
+    height: 6%;
+    background-color: #2A2A2A;
+    mix-blend-mode: normal;
+    border: 1px solid #050505;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-#content {
-    position: absolute;
-    top: 10%;
+header #menu {
+    height: 100%;
+    display: flex;
+    /* justify-content: space-around; */
+    font-size: 22px;
+    width: 100%;
+}
+
+header #menu #left-menu {
+    margin-left: 10%;
+    position: relative;
+}
+
+header #menu #right-menu {
+    position: relative;
+
+    margin: auto 10% auto auto;
+}
+
+/* #menu #home {
+    height: 100%;
+} */
+
+#left-menu {
+    display: flex;
+    /* position: relative; */
+}
+
+#left-menu div {
+    margin: auto 0 !important;
+    padding: 0 10px;
+    color: white;
+
+}
+
+#left-menu .hmenu {
+    position: relative;
+    top: 25%;
+    height: 51px;
     cursor: pointer;
 }
 
-.bar-1,
-.bar-2,
-.bar-3 {
-    width: 35px;
-    height: 5px;
-    background-color: #000;
-    margin: 6px 0;
-    transition: 0.4s;
+#left-menu .hmenu>ul {
+    list-style: none;
+    display: none;
+
 }
 
-.change.bar-1 {
-    transform: translate(0, 11px) rotate(-45deg);
+#left-menu .hmenu>ul li a {
+    display: block;
+    line-height: 40px;
+    font-variant: small-caps;
+    padding: 0 10px;
+    position: relative;
+    z-index: 1000;
+    background-color: #333333a1;
+
 }
 
-.change.bar-2 {
-    opacity: 0;
+#left-menu .hmenu:hover>ul {
+    display: block;
 }
 
-.change.bar-3 {
-    transform: translate(0, -11px) rotate(45deg);
+/* #left-menu div.sub-menu {
+    width: 55px;
+    padding-top: 8%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+#left-menu div.sub-menu li {
+    list-style: none;
+}
+
+#left-menu div.sub-menu a {
+    margin-left: -20px;
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    width: 120px;
+    height: 40px;
+}
+
+#left-menu div.sub-menu:hover a,
+.sub-menu:hover {
+    display: block;
+    background-color: #333333;
+} */
+
+
+#menu img#logo {
+    position: relative;
+    height: 80%;
+    width: 50px;
+    border-radius: 15px;
+    margin: 10% 0;
+}
+
+#right-menu {
+    margin: auto 0;
+}
+
+#menu a {
+    /* text-decoration: none; */
+    color: white;
+}
+
+#menu a.Truyen {
+    margin: 0 10px;
+}
+
+#menu a.Favorite-LN i {
+    margin: 0 20px;
+    color: red;
+    height: 24.8px;
+    width: 24.8px;
+}
+
+#SignIn_Register {
+    margin: 0;
+}
+
+main {
+    width: 100%;
+    min-height: 94%;
+    background-color: #111111;
+}
+
+
+
+main>.container {
+    width: auto;
+    margin: auto 15%;
+}
+
+/* main a {
+    text-decoration: none;
+} */
+
+#nen-dau-page {
+    position: relative;
+    background: url('./img/the-corrupting-heart-skadi-arknights-anime-video-game-wallpaper-2560x1600_7.jpg');
+    background-position: center center;
+    width: 70%;
+    height: 160px;
+    margin: 0 auto;
+}
+
+.row {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+
+.announcements-box #announcements {
+    padding: 15px 20px;
+    font-size: 18px;
+    line-height: 22px;
+    background-color: #1F1F1F;
+    margin-bottom: 40px;
+}
+
+.thumb-container .thumb-item {}
+
+.container .thumb-container .thumb-item .thumb-wrapper {
+    background-image: url("./img/s14287-454aa91b-32b2-4c35-9a17-71f028c28b50-m.jpg");
+    background-size: cover;
+    width: 125px;
+    height: 185px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 10px;
+}
+
+.thumb-item .series-title {
+    color: white;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    height: 4.2rem;
+    line-height: 20px;
+    line-height: 2rem;
+    margin-bottom: 4px;
+    margin-top: 6px;
+    text-align: center;
+    width: 145px;
+}
+
+.container .thumb-container {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+footer {
+    min-height: 10%;
+    background-color: #333333;
+    color: white;
+    text-align: center;
+}
+
+footer ul {
+    height: 100%;
+    list-style: none;
+}
+
+footer a {
+    color: #5fff46;
 }
