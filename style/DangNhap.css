@@ -173,6 +173,7 @@ footer a {
 }
 
 div#form-container {
+    margin-top: 3%;
     position: relative;
     display: block !important;
 }
@@ -214,10 +215,6 @@ div#form-container .cancelbtn {
     position: relative;
 }
 
-div#form-container img.avatar {
-    width: 40%;
-    border-radius: 50%;
-}
 
 div#form-container .container {
     padding: 16px;
@@ -244,5 +241,5 @@ div#form-container .modal-content {
     background-color: #fefefe;
     margin: 5% auto 15% auto;
     border: 1px solid #888;
-    width: 40%;
+    width: 30%;
 }
