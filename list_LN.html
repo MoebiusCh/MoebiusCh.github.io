@@ -2,20 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/img/HRL.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@100&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="./style/DangNhap.css" />
-    <title>Ngao Du Dị Giới</title>
+    <title>Danh Sách Truyện</title>
 </head>
 
 <body>
@@ -24,8 +22,8 @@
             <nav id="menu">
                 <div id="left-menu">
                     <div>
-                        <a href="../index.html" id="home" title="Trang chủ">
-                            <img src="../img/HRL.png" alt="" id="logo" />
+                        <a href="./index.html" id="home" title="Trang chủ">
+                            <img src="./img/HRL.png" alt="" id="logo" />
                         </a>
                     </div>
                     <div class="hmenu">
@@ -33,7 +31,7 @@
                                 class="glyphicon glyphicon-option-vertical"></span></div>
                         <ul class="=sub-menu">
                             <li class="menu-item Truyen">
-                                <a href="" title="Tất cả truyện">Danh Sách Truyện</a>
+                                <a href="./list_LN.html" title="Tất cả truyện">Danh Sách Truyện</a>
                             </li>
                             <li>
                                 <a href="" title="Đăng truyện">Đăng truyện</a>
@@ -47,37 +45,41 @@
                             <i class="fa fa-heart"></i> </a></span>
 
                     <span id="SignIn_Register">
-                        <a href="">Đăng nhập</a>
+                        <a href="./DangNhap.html">Đăng nhập</a>
                     </span>
                 </div>
             </nav>
         </header>
-        <main id="mainpart" style="min-height: 672px;">
-            <div id="form-container" class="modal">
-                <form class="modal-content" method="post">
-
-                    <div class="container">
-                        <label for="uname"><b>Tài khoản</b></label>
-                        <input type="text" placeholder="Username" name="uname" required>
-
-                        <label for="psw"><b>Mật khẩu</b></label>
-                        <input type="password" placeholder="Password" name="psw" required>
-
-                        <button type="submit">Login</button>
-                        <label>
-                            <input type="checkbox" checked="checked" name="remember"> Remember me
-                        </label>
-                    </div>
-
-                    <div class="container form-button" style="background-color:#f1f1f1">
-                        <button type="button" class="cancelbtn">Cancel</button>
-                        <span class="psw">Quên <a href="#">mật khẩu?</a></span>
-                    </div>
-                </form>
+        <main>
+            <div id="wrapper">
+                <div id="table-container" style="top:20%; position: absolute;">
+                    <table>
+                        <th>Truyện</th>
+                        <tr>
+                            <td>Truyện</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </main>
-
-
+        <footer>
+            <ul class=" footer-container">
+                <li>
+                    <h3>Về tôi</h3>
+                </li>
+                <li>
+                    YouTube:
+                    <a href="https://www.youtube.com/@tranphat1463/featured">Tran Phat</a>
+                </li>
+                <li>
+                    địa chỉ:<a href="https://www.facebook.com/profile.php?id=100024186503365">
+                        QTSC9</a>
+                </li>
+            </ul>
+        </footer>
     </div>
 </body>
 

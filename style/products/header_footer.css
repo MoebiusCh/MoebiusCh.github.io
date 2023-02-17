@@ -97,6 +97,10 @@ header #menu #right-menu {
     display: block;
 }
 
+#left-menu .hmenu ul a:hover {
+    background-color: #5554549f;
+}
+
 /* #left-menu div.sub-menu {
     width: 55px;
     padding-top: 8%;
@@ -159,21 +163,30 @@ header #menu #right-menu {
     margin: 0;
 }
 
-main {
-    width: 100%;
-    min-height: 94%;
-    background-color: var(--body-color);
-    padding-bottom: 30px;
-    min-height: 100vh;
-}
-
-
-
-main>.container {
-    width: auto;
-    margin: auto 15%;
-}
 
 /* main a {
     text-decoration: none;
 } */
+
+
+footer {
+    min-height: 10%;
+    background-color: #333333;
+    color: white;
+    text-align: center;
+}
+
+footer ul.footer-container {
+    margin: 0 !important;
+    height: 100%;
+    list-style: none;
+    padding: 10px;
+}
+
+ul.footer-container li h3 {
+    margin: 0 !important;
+}
+
+footer a {
+    color: #5fff46;
+}

@@ -1,0 +1,35 @@
+
+
+main {
+    width: 100%;
+    /* min-height: 94%; */
+    background-color: var(--body-color);
+    padding-bottom: 10px;
+    height: 100vh;
+}
+
+
+
+main>.container {
+    width: auto;
+    margin: auto 15%;
+}
+
+.content-container {
+    min-height: 200px;
+    width: 80%;
+    margin: 10px auto;
+    color: white;
+}
+
+.content-container .content-box {
+    background-color: #383838;
+    padding: 10px 10px 10px 40px;
+    margin: 10px;
+}
+
+.content-box-body .content-box-body-content li {
+    list-style: none;
+    margin-left: 20px;
+    margin: 10px;
+}

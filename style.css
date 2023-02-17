@@ -27,16 +27,14 @@ body>.container-body {
 
 header #menu {
     z-index: 2000;
-    position: relative;
+    position: fixed;
+    line-height: 14px;
     height: 6%;
     background-color: #2A2A2A;
     mix-blend-mode: normal;
     border: 1px solid #050505;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
 
-header #menu {
-    height: 100%;
     display: flex;
     /* justify-content: space-around; */
     font-size: 22px;
@@ -91,11 +89,14 @@ header #menu #right-menu {
     position: relative;
     z-index: 1000;
     background-color: #333333a1;
-
 }
 
 #left-menu .hmenu:hover>ul {
     display: block;
+}
+
+#left-menu .hmenu ul a:hover {
+    background-color: #5554549f;
 }
 
 /* #left-menu div.sub-menu {
@@ -168,8 +169,6 @@ main {
     min-height: 100vh;
 }
 
-
-
 main>.container {
     width: auto;
     margin: auto 15%;
@@ -182,9 +181,11 @@ main>.container {
 #nen-dau-page {
     position: relative;
     background: url('./img/the-corrupting-heart-skadi-arknights-anime-video-game-wallpaper-2560x1600_7.jpg');
-    background-position: center center;
+    background-position: 45% 20%;
+    /* background-position: center center; */
+    background-repeat: no-repeat;
     width: 70%;
-    height: 160px;
+    height: 190px;
     margin: 0 auto;
 }
 
@@ -249,6 +250,7 @@ footer {
     background-color: #333333;
     color: white;
     text-align: center;
+    z-index: 1000;
 }
 
 footer ul.footer-container {

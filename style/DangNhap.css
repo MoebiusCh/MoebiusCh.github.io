@@ -97,6 +97,10 @@ header #menu #right-menu {
     display: block;
 }
 
+#left-menu .hmenu ul a:hover {
+    background-color: #5554549f;
+}
+
 
 #menu img#logo {
     position: relative;
@@ -173,7 +177,7 @@ footer a {
 }
 
 div#form-container {
-    margin-top: 3%;
+    margin-top: 5%;
     position: relative;
     display: block !important;
 }
@@ -228,7 +232,7 @@ div#form-container span.psw {
 
 div#form-container .modal {
     position: fixed;
-    z-index: 1;
+    z-index: 1 !important;
     left: 0;
     top: 0;
     width: 100%;
