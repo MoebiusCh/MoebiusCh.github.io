@@ -138,7 +138,6 @@ main {
     width: 100%;
     min-height: 94%;
     padding-bottom: 30px;
-    min-height: 100vh;
 }
 
 
@@ -243,7 +242,7 @@ div#form-container .modal {
 
 div#form-container .modal-content {
     background-color: #fefefe;
-    margin: 5% auto 15% auto;
+    margin: 1% auto 15% auto;
     border: 1px solid #888;
     width: 30%;
 }
