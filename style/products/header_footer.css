@@ -85,12 +85,10 @@ header #menu #right-menu {
 #left-menu .hmenu>ul li a {
     display: block;
     line-height: 40px;
-    font-variant: small-caps;
     padding: 0 10px;
     position: relative;
     z-index: 1000;
     background-color: #333333a1;
-
 }
 
 #left-menu .hmenu:hover>ul {
@@ -163,11 +161,34 @@ header #menu #right-menu {
     margin: 0;
 }
 
+/* #left-menu div.sub-menu {
+    width: 55px;
+    padding-top: 8%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 
-/* main a {
-    text-decoration: none;
+}
+
+#left-menu div.sub-menu li {
+    list-style: none;
+}
+
+#left-menu div.sub-menu a {
+    margin-left: -20px;
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    width: 120px;
+    height: 40px;
+}
+
+#left-menu div.sub-menu:hover a,
+.sub-menu:hover {
+    display: block;
+    background-color: #333333;
 } */
-
 
 footer {
     min-height: 10%;

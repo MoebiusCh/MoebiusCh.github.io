@@ -1,0 +1,53 @@
+:root {
+    --text-content-color: white;
+}
+
+main {
+    width: 100%;
+    min-height: 94%;
+    background-color: var(--body-color);
+    padding-bottom: 30px;
+    min-height: 100vh;
+}
+
+main>.container {
+    width: auto;
+    margin: auto 15%;
+}
+
+section article {
+
+    width: 100%;
+}
+
+.content-container section article .text-container {
+    width: 70%;
+    text-align: left;
+    margin: 0 auto 3% auto;
+    color: var(--text-content-color);
+    font-size: large;
+}
+
+.content-container section article .Title {
+    color: var(--text-content-color);
+    font-size: 36px;
+    font-weight: 600;
+    margin: 20px;
+    text-align: center;
+}
+
+aside {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 20%;
+    right: 2%;
+    text-align: right;
+    color: white;
+}
+
+aside .tool-item {
+    line-height: 80px;
+    width: 50px;
+}
