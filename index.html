@@ -31,11 +31,11 @@
 </style>
 
 <body>
-  <video autoplay loop id="myVideo" class="myVideo">
+  <video autoplay muted loop id="myVideo" class="myVideo" style="z-index: 2000;">
     <source src="./videos/Bocchi.mp4" type="video/mp4">
   </video>
 
-  <audio autoplay muted loop class="myAudio">
+  <audio autoplay class="myAudio">
     <source src="./audio/Suisei is Talalala (64 kbps).mp3" type="audio/mpeg">
   </audio>
   <div class="container-body">
@@ -116,7 +116,6 @@
                         ⣿⣿⣿⣿⣦⡙⣿⣆⢻⡌⢿⣶⢤⣉⣙⣿⣷⡀⠙⠽⠷⠄⠹⣿⣟⣿⣆⢙⣋⣤⣤⣤⣄⣀⢀⢀⢀⢀⣾⣿⣟⡷⣯⡿⢃⣼⣿⣿⣿⠇⣼⡟⣡⣿⣿⣿⢀⡿⢠⠈⣿
                         ⣿⣿⣿⣿⣿⣷⣮⣿⣿⣿⡌⠁⢤⣤⣤⣤⣬⣭⣴⣶⣶⣶⣆⠈⢻⣿⣿⣆⢻⣿⣿⣿⣿⣿⣿⣷⣶⣤⣌⣉⡘⠛⠻⠶⣿⣿⣿⣿⡟⣰⣫⣴⣿⣿⣿⣿⠄⣷⣿⣿⣿
                       </div>
-
                     </div>
               </div>
             </div>
@@ -131,7 +130,7 @@
                 Truyện cập nhật
               </h1>
             </header>
-            <div class="thumb-container" style="justify-content: space-evenly;">
+            <div class="thumb-container">
               <div class="thumb-item">
                 <a href="./product/NgaoDuDiGioi.html">
                   <div class="thumb-wrapper">
@@ -143,16 +142,6 @@
                 </a>
               </div>
               <div class="thumb-item">
-                <a href="#">
-                  <div class="thumb-wrapper">
-                    <img src="./img/2.jpg" alt="">
-                  </div>
-                </a>
-                <a href="#">
-                  <div class="series-title">Tiểu thuyết Kamen Rider</div>
-                </a>
-              </div>
-              <div class="thumb-item">
                 <a href="./product/Rebuild-World.html">
                   <div class="thumb-wrapper">
                     <img src="https://i.docln.net/lightnovel/covers/s11059-c349b687-3bc1-41b4-aa5c-340cf13293e8-m.jpg"
@@ -161,6 +150,16 @@
                 </a>
                 <a href="./product/Rebuild-World.html">
                   <div class="series-title">Rebuild World</div>
+                </a>
+              </div>
+              <div class="thumb-item">
+                <a href="#">
+                  <div class="thumb-wrapper">
+                    <img src="./img/2.jpg" alt="">
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="series-title">Tiểu thuyết Kamen Rider</div>
                 </a>
               </div>
               <div class="thumb-item">
@@ -242,9 +241,9 @@
   </div>
   <script>
     var video = document.querySelector(".myVideo");
-    video.volume = 0.1;
+    video.volume = 0.05;
     var audio = document.querySelector(".myAudio");
-    audio.volume = 0.1;
+    audio.volume = 0.05;
   </script>
 
 </body>

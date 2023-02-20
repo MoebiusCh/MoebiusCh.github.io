@@ -41,6 +41,10 @@ main>.container {
     margin-bottom: 40px;
 }
 
+.thumb-container {
+    justify-content: flex-start;
+}
+
 .thumb-container .thumb-item {}
 
 .container .thumb-container .thumb-item .thumb-wrapper img {
@@ -53,7 +57,10 @@ main>.container {
     margin: 10px;
 }
 
+
 .thumb-item .series-title {
+    margin: 0 auto;
+
     color: white;
     font-size: 17px;
     /* font-size: 1.4rem; */
@@ -64,7 +71,7 @@ main>.container {
     margin-bottom: 4px;
     margin-top: 6px;
     text-align: center;
-    width: 140px;
+    max-width: 120px;
 }
 
 .thumb-item .series-title:hover {
