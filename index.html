@@ -31,11 +31,11 @@
 </style>
 
 <body>
-  <video autoplay muted loop id="myVideo">
+  <video autoplay loop id="myVideo" class="myVideo">
     <source src="./videos/Bocchi.mp4" type="video/mp4">
   </video>
 
-  <audio autoplay loop>
+  <audio autoplay muted loop class="myAudio">
     <source src="./audio/Suisei is Talalala (64 kbps).mp3" type="audio/mpeg">
   </audio>
   <div class="container-body">
@@ -240,6 +240,13 @@
       </ul>
     </footer>
   </div>
+  <script>
+    var video = document.querySelector(".myVideo");
+    video.volume = 0.1;
+    var audio = document.querySelector(".myAudio");
+    audio.volume = 0.1;
+  </script>
+
 </body>
 
 </html>
