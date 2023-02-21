@@ -70,16 +70,19 @@ header #menu #right-menu {
 }
 
 #left-menu .hmenu {
-    position: relative;
+    height: 70%;
+    max-width: 200px;
     top: 25%;
+    left: 50px;
     height: 51px;
     cursor: pointer;
 }
 
 #left-menu .hmenu>ul {
+    position: absolute;
     list-style: none;
     display: none;
-
+    width: 200px;
 }
 
 #left-menu .hmenu>ul li a {
@@ -87,12 +90,16 @@ header #menu #right-menu {
     line-height: 40px;
     padding: 0 10px;
     position: relative;
-    z-index: 1000;
+    z-index: 2000;
     background-color: #333333a1;
+    min-width: 200px;
 }
+
+
 
 #left-menu .hmenu:hover>ul {
     display: block;
+    margin-top: 20px !important;
 }
 
 #left-menu .hmenu ul a:hover {
