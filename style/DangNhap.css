@@ -7,13 +7,12 @@
 
 /* root color background-color: #111111; */
 :root {
-    --body-color: #ffffff;
+    --body-color: #111111;
 }
 
 body {
     height: 100%;
     width: 100%;
-    background-color: var(--body-color);
 }
 
 a {
@@ -69,17 +68,25 @@ header #menu #right-menu {
 
 }
 
+#left-menu .hmenu .hmenu-icon {
+    padding-top: 25%;
+}
+
 #left-menu .hmenu {
-    position: relative;
+    height: 70%;
+    max-width: 200px;
     top: 25%;
+    left: 50px;
     height: 51px;
     cursor: pointer;
 }
 
 #left-menu .hmenu>ul {
+    position: absolute;
     list-style: none;
     display: none;
-
+    width: 200px;
+    margin-top: 1% !important;
 }
 
 #left-menu .hmenu>ul li a {
@@ -87,18 +94,53 @@ header #menu #right-menu {
     line-height: 40px;
     padding: 0 10px;
     position: relative;
-    z-index: 1000;
+    z-index: 2000;
     background-color: #333333a1;
-
+    min-width: 200px;
 }
+
+.main-menu-container {
+    display: flex;
+}
+
 
 #left-menu .hmenu:hover>ul {
     display: block;
+    /*margin-top: 1% !important;*/
 }
 
 #left-menu .hmenu ul a:hover {
     background-color: #5554549f;
 }
+
+/* #left-menu div.sub-menu {
+    width: 55px;
+    padding-top: 8%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+#left-menu div.sub-menu li {
+    list-style: none;
+}
+
+#left-menu div.sub-menu a {
+    margin-left: -20px;
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    width: 120px;
+    height: 40px;
+}
+
+#left-menu div.sub-menu:hover a,
+.sub-menu:hover {
+    display: block;
+    background-color: #333333;
+} */
 
 
 #menu img#logo {
