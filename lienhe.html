@@ -2,21 +2,33 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/img/HRL.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- from the internet -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@100&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="./style/DangNhap.css" />
-    <title>Đăng Nhập</title>
+    <!-- by me -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style/products/header_footer.css">
+    <title>Liên hệ - HRL</title>
 </head>
+<style>
+    #myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 10%;
+        /* top: 20%; */
+        height: 200px;
+        width: 200px;
+        z-index: 0;
+    }
+</style>
 
 <body>
     <div class="container-body">
@@ -58,37 +70,37 @@
                             <i class="fa fa-heart"></i> </a></span>
 
                     <span id="SignIn_Register">
-                        <a href="./DangNhap.html">Đăng nhập</a><span style="color:white">/</span>
-                        <a href="./Dangky.html">Đăng Ký</a>
+                        <a href="./DangNhap.html">Đăng nhập</a>
                     </span>
                 </div>
             </nav>
         </header>
-        <main id="mainpart" style="min-height: 672px;">
-            <div id="form-container" class="modal">
-                <form class="modal-content" method="post">
-
-                    <div class="container">
-                        <label for="uname"><b>Tài khoản</b></label>
-                        <input type="text" placeholder="Username" name="uname" required>
-
-                        <label for="psw"><b>Mật khẩu</b></label>
-                        <input type="password" placeholder="Password" name="psw" required>
-
-                        <button type="submit">Login</button>
-                        <label>
-                            <input type="checkbox" checked="checked" name="remember"> Remember me
-                        </label>
-                    </div>
-
-                    <div class="container form-button" style="background-color:#f1f1f1">
-                        <button type="button" class="cancelbtn">Cancel</button>
-                        <span class="psw">Quên <a href="#">mật khẩu?</a></span>
-                    </div>
-                </form>
+        <main>
+            <div
+                style="position:relative; padding: 30px; padding-left: 7%;margin: 50px auto; width: 80%; border-radius: 20px;">
+                <!-- google map -->
+                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1PWbC2vwUjkJsqxEQfAqudNWCcCM9J9g&ehbc=2E312F"
+                    width="1000" height="600">
+                </iframe>
             </div>
         </main>
+        <footer>
+            <ul class=" footer-container">
+                <li>
+                    <h3>credit</h3>
+                    Website được tạo bởi
+                    <a href="https://www.youtube.com/@tranphat1463/featured">Trần Phát</a>
+                </li>
+
+                <li>
+                    Ngày 22/2/2023
+                </li>
+            </ul>
+        </footer>
+        <!-- UHChat -->
+        <script src="https://uhchat.net/code.php?f=02ab0d"></script>
     </div>
+
 </body>
 
 </html>

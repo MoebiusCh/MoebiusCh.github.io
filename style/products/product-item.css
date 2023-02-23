@@ -1,3 +1,7 @@
+:root {
+    --body-color: #111111;
+}
+
 main {
     width: 100%;
     /* min-height: 94%; */
