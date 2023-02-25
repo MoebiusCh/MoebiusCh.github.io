@@ -62,18 +62,21 @@ header #menu #right-menu {
     /* position: relative; */
 }
 
+header {
+    color: white;
+}
+
 #left-menu div {
     margin: auto 0 !important;
     padding: 0 10px;
-    color: white;
-
 }
+
 
 #left-menu .hmenu .hmenu-icon {
     padding-top: 25%;
 }
 
-#left-menu .hmenu {
+header .hmenu {
     height: 70%;
     max-width: 200px;
     top: 25%;
@@ -82,22 +85,22 @@ header #menu #right-menu {
     cursor: pointer;
 }
 
-#left-menu .hmenu>ul {
+header .hmenu>ul {
     position: absolute;
     list-style: none;
     display: none;
-    width: 200px;
+    min-width: 200px;
     margin-top: 1% !important;
 }
 
-#left-menu .hmenu>ul li a {
+header .hmenu>ul li a {
     display: block;
     line-height: 40px;
     padding: 0 10px;
     position: relative;
     z-index: 2000;
     background-color: #333333a1;
-    min-width: 200px;
+    min-width: 100px;
 }
 
 .main-menu-container {
@@ -105,12 +108,12 @@ header #menu #right-menu {
 }
 
 
-#left-menu .hmenu:hover>ul {
+header .hmenu:hover>ul {
     display: block;
     /*margin-top: 1% !important;*/
 }
 
-#left-menu .hmenu ul a:hover {
+header .hmenu ul a:hover {
     background-color: #5554549f;
 }
 
@@ -174,6 +177,134 @@ header #menu #right-menu {
 
 #SignIn_Register {
     margin: 0;
+}
+
+/* responsive */
+.responsive {
+    display: none;
+}
+
+@media screen and (max-width: 854px) {}
+
+@media screen and (max-width: 520px) {
+    .non-responsive {
+        display: none;
+    }
+
+    .responsive {
+        display: block;
+    }
+
+    #right-menu {
+        display: flex;
+    }
+
+    header .hmenu {
+        margin-left: 25%;
+    }
+
+    .hmenu-icon {
+        margin-top: 10px;
+    }
+
+    .non-responsive {
+        display: none;
+    }
+
+
+    header ul {
+        left: 0;
+        width: 100%;
+    }
+
+    li {
+        text-align: center;
+    }
+
+
+
+    .hmenu-icon {
+        margin-top: 10px;
+    }
+
+    .non-responsive {
+        display: none;
+    }
+
+
+    header ul {
+        left: 0;
+        width: 100%;
+    }
+
+    header ul li {
+        text-align: center;
+    }
+
+    .responsive {
+        display: block;
+    }
+
+    #right-menu {
+        display: flex;
+    }
+
+    #right-menu div {
+        line-height: 50px;
+    }
+
+    header .hmenu>ul li a {
+        line-height: 40px;
+    }
+
+    header .hmenu>ul {
+        min-width: 120px;
+        font-size: 14px;
+        margin-top: 1% !important;
+        /* right: -40px; */
+    }
+
+    div.hmenu .hmenu-icon {
+        padding-top: 0.8px;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .non-responsive {
+        display: none;
+    }
+
+    .responsive {
+        display: block;
+    }
+
+    #right-menu {
+        display: flex;
+    }
+
+    header .hmenu {
+        margin-left: 20%;
+    }
+
+    .hmenu-icon {
+        margin-top: 10px;
+    }
+
+    .non-responsive {
+        display: none;
+    }
+
+
+    header ul {
+        left: 0;
+        width: 100%;
+    }
+
+    li {
+        text-align: center;
+    }
+
+
 }
 
 /* #left-menu div.sub-menu {
