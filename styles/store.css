@@ -1,0 +1,29 @@
+.content-section {
+    display: grid;
+    grid-template-rows: auto;
+    row-gap: 20px;
+    width: 70%;
+    margin: 50px auto;
+}
+
+.shop-item {
+    display: grid;
+    grid-template-columns: 1.5fr 4fr repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+.shop-item:not(.title) {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+.shop-item:not(.title) * {}
+
+.shop-item-image {
+    width: 150px;
+}
+
+.remove-icon {
+    width: 15px;
+}

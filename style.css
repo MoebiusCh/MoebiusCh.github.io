@@ -1,267 +1,227 @@
+html {
+    box-sizing: border-box;
+}
+
 :root {
-    --body-color: #1F1F1F;
+    --width-product: 330px;
 }
 
-main {
-    width: 100%;
-    min-height: 94%;
-    background-color: var(--body-color);
-    padding-bottom: 30px;
-    min-height: 100vh;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-main>.container {
-    width: auto;
-    margin: auto 0;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
 }
 
-/* main a {
+input,
+textarea,
+select,
+button {
+    outline: none;
+}
+
+input {
+    line-height: normal;
+}
+
+label,
+button {
+    cursor: pointer;
+}
+
+a {
     text-decoration: none;
-} */
-
-#nen-dau-page {
-    position: relative;
-    background: url('./img/the-corrupting-heart-skadi-arknights-anime-video-game-wallpaper-2560x1600_7.jpg');
-    background-position: 45% 20%;
-    /* background-position: center center; */
-    background-repeat: no-repeat;
-    width: 70%;
-    height: 190px;
-    margin: 0 auto;
 }
 
-.row-container {
-    position: relative;
-    /* width: 100%; */
-    text-align: center;
+.slider img {
+    display: block;
+    max-width: 100%;
 }
 
-
-.row-container .announcements-box #announcements {
-    padding: 15px;
-    font-size: 18px;
-    line-height: 22px;
-    background-color: #1F1F1F;
-    margin-bottom: 40px;
-    width: 70%;
-    margin: 0 auto;
-}
-
-.thumb-container {
-    justify-content: flex-start;
-}
-
-
-.container .thumb-container .thumb-item .thumb-wrapper img {
-    /* background-image: url("./img/s14287-454aa91b-32b2-4c35-9a17-71f028c28b50-m.jpg"); */
-    background-size: cover;
-    width: 125px;
-    height: 170px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    margin: 10px;
-}
-
-
-.thumb-item .series-title {
-    margin: 0 auto;
-
-    color: white;
+body {
+    font-family: "Poppins", sans-serif;
     font-size: 16px;
-    /* font-size: 1.4rem; */
-    font-weight: 600;
-    height: 4.2rem;
-    line-height: 20px;
-    /* margin-bottom: 4px; */
+    line-height: 1;
+}
+
+
+#menu-container {
+    /* position: fixed; */
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    padding: 1% 0;
+    box-shadow: 0 0 1px black;
+}
+
+#menu-container .left-menu {
+    cursor: pointer;
+}
+
+.right-menu {
+    display: flex;
+}
+
+.right-menu div.item {
+    margin-left: 20px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgba(100, 100, 111, 0.1);
+    border-radius: 10px;
+}
+
+.right-menu div.item:hover {
+    background-color: rgba(100, 100, 111, 0.2);
+}
+
+#content-container {
+    padding: auto 15px auto 15px;
+}
+
+.slider {
+    max-width: auto;
+    margin: 15px auto 25px auto;
+    position: relative;
+    width: 80%;
+}
+
+.slider-next,
+.slider-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 100rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+}
+
+.slider-next {
+    right: -25px;
+}
+
+.slider-prev {
+    left: -25px;
+}
+
+.slider-dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    z-index: 10;
+}
+
+.slider-dots li {
+    margin: 0 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 100rem;
+    background-color: #999;
+    cursor: pointer;
+    transition: background-color 0.25s linear;
+}
+
+.slider-dots li.active {
+    background-color: white;
+}
+
+.slider-wrapper {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-main {
+    display: flex;
+    position: relative;
+    transition: transform 0.4s linear;
+    height: 100%;
+}
+
+.slider-item {
+    height: 100%;
+    width: 100%;
+    flex: 1 0 100%;
+    user-select: none;
+}
+
+.slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.title-product {
     text-align: center;
-    max-width: 125px;
 }
 
-.thumb-item .series-title:hover {
-    color: #10B18E;
-}
-
-.row-container.thumb {
-    width: 70%;
-    margin: 0 auto;
-}
-
-.container .thumb-container {
+.product-container {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    margin-bottom: 50px;
+    justify-content: space-around;
 }
 
-#announcements .funny-content div p {
-    color: rgb(255, 255, 255);
-    font-size: 6px;
-    line-height: 6px;
-    margin: 0 auto;
-    width: 40%;
+.product-item {
+    width: var(--width-product);
 }
 
-.announcement-item a {
-    color: red;
+.product-item img {
+    width: var(--width-product);
 }
 
-#myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 10%;
-    /* top: 20%; */
-    height: 200px;
-    width: 200px;
-    z-index: 0;
+.product-item h3 {
+    height: 40px;
+    text-align: center;
 }
 
-
-@media screen and (max-width: 980px) {
-
-
-    #announcements .announcement-item a {
-        font-size: 14px;
-    }
-
-    #announcements .funny-content div p {
-        width: 40%;
-        font-size: 4px;
-        line-height: 4px;
-        margin: 0 30%;
-    }
-
-    #myVideo {
-        bottom: 10%;
-        /* top: 20%; */
-        height: 100px;
-        width: 100px;
-        z-index: 0;
-    }
-
-    .thumb-item .series-title {
-        font-size: 12px;
-    }
+.shopCart-wrapper {
+    text-align: center;
 }
 
-@media screen and (max-width: 800px) {
-    #nen-dau-page {
-        /* display: none; */
-        height: 100px;
-        width: 100%;
-    }
+.btn-shopCart {
+    width: auto;
+    padding: 10px;
+}
 
-    .container.announcement {
-        padding: 0;
-    }
-
-    .row-container .announcements-box #announcements {
-        padding: 15px 20px;
-        font-size: 18px;
-        line-height: 22px;
-        background-color: #1F1F1F;
-        margin-bottom: 40px;
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .container .thumb-container {
-        padding-left: 10px;
-    }
-
-    .container .thumb-container .thumb-item .thumb-wrapper img {
-        /* background-image: url("./img/s14287-454aa91b-32b2-4c35-9a17-71f028c28b50-m.jpg"); */
-        background-size: cover;
-        width: 90px;
-        height: 140px;
-        background-position: center center;
-        background-repeat: no-repeat;
-        margin: 10px;
-    }
-
-    .row-container.thumb {
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .thumb-item .series-title {
-        /* font-size: 12px; */
-        width: 100px;
-    }
+footer {
+    margin-top: 50px;
+    background-color: #222222;
+    color: white;
 
 }
 
-@media screen and (max-width: 520px) {
-    h1 {
-        font-size: 20px;
-    }
-
-    .container .thumb-container .thumb-item .thumb-wrapper img {
-        /* background-image: url("./img/s14287-454aa91b-32b2-4c35-9a17-71f028c28b50-m.jpg"); */
-        background-size: cover;
-        width: 90px;
-        height: 140px;
-        background-position: center center;
-        background-repeat: no-repeat;
-        margin: 5px;
-    }
-
-
-    #announcements .funny-content div p {
-        width: 40%;
-        font-size: 3.5px;
-        line-height: 3.5px;
-        margin: 0 30%;
-    }
-
-    .thumb-item .series-title {
-        font-size: 10px;
-        width: 85px;
-    }
-
-    #myVideo {
-        bottom: 10%;
-        /* top: 20%; */
-        height: 100px;
-        width: 50px;
-        z-index: 0;
-    }
+.footer-item {
+    display: flex;
 }
 
+footer ul {
+    padding-top: 1%;
+    padding-left: 10%;
+    list-style: none;
+}
 
-@media screen and (max-width: 415px) {
-
-    #nen-dau-page {
-        /* display: none; */
-        height: 50px;
-    }
-
-    #announcements .announcement-item a {
-        font-size: 12px;
-    }
-
-    #announcements .funny-content div p {
-        width: 40%;
-        font-size: 2.5px !important;
-        line-height: 3px;
-        margin: 0 30%;
-    }
-
-    .container .thumb-container .thumb-item .thumb-wrapper img {
-        /* background-image: url("./img/s14287-454aa91b-32b2-4c35-9a17-71f028c28b50-m.jpg"); */
-        background-size: cover;
-        width: 85px;
-        height: 130px;
-        background-position: center center;
-        background-repeat: no-repeat;
-        margin: 5px;
-    }
-
-    .thumb-item .series-title {
-        font-size: 10px;
-        width: 85px;
-    }
-
-
+footer ul li {
+    margin: 20px;
 }
