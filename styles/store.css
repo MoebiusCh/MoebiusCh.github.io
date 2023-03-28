@@ -24,8 +24,13 @@
 
 .shop-item:not(.title) * {}
 
+.shop-item .quantity-container button {
+    width: 20px;
+}
+
 .shop-item-image {
     width: 150px;
+    border-radius: inherit;
 }
 
 .remove-icon {

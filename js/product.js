@@ -8,7 +8,23 @@ let InputQuantityProduct = parseFloat(quantityProduct.value);
 let totalQuantityProduct = 0;
 
 const path = location.pathname;
-const fileName = path.slice(path.lastIndexOf("/") + 1, path.lastIndexOf("."));
+const fileName = path.slice(path.lastIndexOf("/") + 1, path.lastIndexOf(".html"));
+
+const ObjNamingKey = {
+    Quantity: "Quantity_",
+    Cost: "Cost_"
+}
+/* Get Value every times reload page */
+window.addEventListener('load', () => {
+    getValueFromLocalStorage();
+})
+function getValueFromLocalStorage() {
+    /* lấy value của key Storage */
+    const valueOfKeyStorage = window.localStorage.getItem(ObjNamingKey.Quantity + fileName);
+    if (valueOfKeyStorage != undefined) {
+        totalQuantityProduct = parseFloat(valueOfKeyStorage);
+    } console.log(totalQuantityProduct);
+}
 
 quantityProduct.addEventListener('change', () => {
     let choose = "Typing";
@@ -25,16 +41,6 @@ decrement.addEventListener('click', () => {
 ButtonAddCart.addEventListener('click', () => {
     setLocalStorage();
 })
-/* Get Value every times reload page */
-window.addEventListener('load', () => {
-    getValueFromLocalStorage();
-})
-function getValueFromLocalStorage() {
-    const valueOfKeyStorage = window.localStorage.getItem("Quantity" + fileName);
-    if (valueOfKeyStorage != undefined) {
-        totalQuantityProduct = parseFloat(valueOfKeyStorage);
-    } console.log(totalQuantityProduct);
-}
 
 function UpdateQuantityProduct(choose) {
     // InputQuantityProduct = parseFloat(quantityProduct.value);
@@ -65,12 +71,8 @@ function setLocalStorage() {
 
     console.log(totalQuantityProduct)
 
-    window.localStorage.setItem("Quantity_" + fileName, totalQuantityProduct);
-    window.localStorage.setItem("Cost_" + fileName, cost.innerText);
-    // lấy value của key này
-    const valueOfKeyStorage = window.localStorage.getItem("Quantity_" + fileName);
+    window.localStorage.setItem(ObjNamingKey.Quantity + fileName, totalQuantityProduct);
+    window.localStorage.setItem(ObjNamingKey.Cost + fileName, cost.innerText);
 
-    console.log(valueOfKeyStorage);
 }
-
 
