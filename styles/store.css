@@ -1,3 +1,7 @@
+#content-container {
+    min-height: 80vh;
+}
+
 .content-section {
     display: grid;
     grid-template-rows: auto;
@@ -25,5 +29,9 @@
 }
 
 .remove-icon {
-    width: 15px;
+    width: 30px;
+}
+
+.remove-icon:hover {
+    cursor: pointer;
 }

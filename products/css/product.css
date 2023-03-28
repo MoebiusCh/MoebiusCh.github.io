@@ -85,7 +85,7 @@
     border-radius: 30px;
 }
 
-.addCart {
+[name="addCart"] {
     width: 40%;
     color: orange;
     background-color: white;

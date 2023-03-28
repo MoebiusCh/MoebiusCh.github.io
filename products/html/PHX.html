@@ -47,15 +47,15 @@
                             bằng cách tạo ra các nhạc cụ tuyệt vời cho những tay trống.</p>
                     </div>
                     <div class="price">
-                        <span class="field">Giá: </span><span class="number">30.000.000 VNĐ</span>
+                        <span class="field">Giá: </span><span class="cost">30000000</span> <span class="unit">VNĐ</span>
                     </div>
                     <div class="quantity">
-                        <span class="field">Số lượng </span> <button name="decrease"> - </button>
-                        <input type="text" value="1"> <button name="increment">
+                        <span class="field">Số lượng </span> <button name="decrement"> - </button>
+                        <input type="text" value="1" class="quantity-number"> <button name="increment">
                             + </button>
                     </div>
                     <div class="shopping-button">
-                        <button class="addCart"><i class="fa fa-shopping-basket" aria-hidden="true"></i> Add to
+                        <button name="addCart"><i class="fa fa-shopping-basket" aria-hidden="true"></i> Add to
                             Cart</button>
                         <button class="buy-now">Mua Ngay</button>
                     </div>
@@ -211,6 +211,7 @@
         </section>
     </div>
     <footer></footer>
+    <script src="../../js/product.js"></script>
     <script src="../../js/header.js"></script>
     <script src="../../js/footer.js"></script>
 </body>
