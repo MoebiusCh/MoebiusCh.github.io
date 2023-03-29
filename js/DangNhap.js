@@ -1,3 +1,7 @@
+const uname = document.querySelector('[name="uname"]');
+const psw = document.querySelector('[name="psw"]');
+const LoginBtn = document.querySelector('[name="loginBtn"]');
+
 function showPassword() {
     var passwordInputBox = document.querySelector('[name="psw"]');
     if (passwordInputBox.type === "password") {
@@ -8,8 +12,6 @@ function showPassword() {
 }
 let userName = "Phatcute";
 let password = "Phat";
-const uname = document.querySelector('[name="uname"]');
-const psw = document.querySelector('[name="psw"]');
 let inputUserName = "";
 let inputPassword = "";
 uname.addEventListener('keyup', function (e) {
@@ -28,3 +30,11 @@ function changeBorderColor(InputValue, Data, box) {
         box.style.borderColor = "green"
     }
 }
+
+LoginBtn.addEventListener('click', function () {
+    if (inputUserName == userName && inputPassword == password) {
+        alert("Bạn đã đăng nhập thành công!");
+    } else {
+        alert("Bạn đã nhập sai tài khoản hoặc mật khẩu!");
+    }
+})
