@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Bộ trống Yamaha - Thoả lấp đam mê</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="./styles/DangNhap.css" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+
+<body>
+    <div id="content-container">
+        <header id="menu-container">
+
+        </header>
+
+        <div class="container-body">
+            <main id="mainpart" style="min-height: 672px;">
+                <div id="form-container" class="modal">
+                    <form class="modal-content" method="post">
+
+                        <div class="container">
+                            <label for="uname"><b>Tài khoản</b></label>
+                            <input type="text" placeholder="Username" name="uname" required>
+                            <br>
+                            <label for="psw"><b>Mật khẩu</b></label>
+                            <input type="password" placeholder="Password" name="psw" required>
+
+                            <button type="submit">Login</button>
+                            <br>
+                            <label>
+                                <input type="checkbox" checked="checked" name="remember"> Remember me
+                            </label>
+                        </div>
+                        <div>
+                            <span>Chưa có tài khản?</span> <a href=""><span>Đăng ký</span></a>
+                        </div>
+                        <div class="container form-button" style="background-color:#f1f1f1; width: 100%;">
+                            <button type="button" class="cancelbtn">Cancel</button>
+                            <span class="psw">Quên <a href="#">mật khẩu?</a></span>
+                        </div>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+    <footer></footer>
+    <script>
+        const psw = document.querySelector('[name="psw"]');
+        psw.addEventListener('keyup', function (e) {
+            console.log(psw.value);
+        }) 
+    </script>
+    <script src="./js/headerMain.js"></script>
+    <script src="./js/footerMain.js"></script>
+</body>
+
+</html>
