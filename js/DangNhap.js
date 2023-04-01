@@ -31,10 +31,13 @@ function changeBorderColor(InputValue, Data, box) {
     }
 }
 
-LoginBtn.addEventListener('click', function () {
+LoginBtn.addEventListener('click', function (event) {
+    event.preventDefault();
     if (inputUserName == userName && inputPassword == password) {
         alert("Bạn đã đăng nhập thành công!");
     } else {
         alert("Bạn đã nhập sai tài khoản hoặc mật khẩu!");
+        uname.value = ""
+        psw.value = ""
     }
 })

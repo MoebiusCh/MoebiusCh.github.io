@@ -87,7 +87,7 @@ function ready() {
             var buttonClicked = event.target;
             buttonClicked.parentElement.parentElement.remove();
 
-            /* update quantity, price after remove rows */
+            /* update LocalStorage after remove rows */
             window.localStorage.removeItem(productList[keyNumber].QuantityPath)
             window.localStorage.removeItem(productList[keyNumber].pricePath)
             console.log(productList[keyNumber].pricePath)
