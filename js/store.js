@@ -7,6 +7,13 @@ if (document.readyState == 'loading') {
 /* Chạy code js sau khi DOMloaded */
 function ready() {
     let contentContainer = document.querySelector('.content-section');
+
+    const cart = {
+        item: []
+    }
+    cart.item = [...JSON.parse(localStorage.getItem('Cart'))]
+    console.log(cart.item[0])
+
     /* danh sách sản phẩm, có thể nâng cấp sang json về sau :3 */
     const productList = [
         {
@@ -35,20 +42,59 @@ function ready() {
         }
     ];
     /*  Render Element Shopping Cart*/
-    RenderElement(productList, contentContainer);
+    RenderElement(cart.item, contentContainer);
+    let quantity = document.querySelectorAll('input[name="quantity"]');
 
     /* Update table data */
-    let quantity = document.querySelectorAll('input[name="quantity"]');
-    console.log(quantity.value)
-    quantity.forEach(function (itemQuantity, keyNumber) {
-        itemQuantity.value = window.localStorage.getItem(productList[keyNumber].QuantityPath);
-        console.log(itemQuantity.value)
-    })
+
     /* mỗi item 1 bảng giá khác nhau */
+    updateCost(cart, quantity);
+    /* Delete table data */
+    let deleteBtn = document.querySelectorAll('.delete');
+    deleteBtn.forEach(function (button, keyNumber) {
+        button.addEventListener('click', function (event) {
+            var buttonClicked = event.target;
+            buttonClicked.parentElement.parentElement.remove();
+            /* update LocalStorage after remove rows */
+            /* should update use data from cart Item */
+
+            cart.item.splice(keyNumber, 1);
+            localStorage.setItem("Cart", JSON.stringify(cart.item));
+        })
+    })
+}
+
+function RenderElement(cartItem, contentContainer) {
+    let productNeedToRenderList = [];
+    for (let i in cartItem) {
+        productNeedToRenderList.push(`
+            <img src="${cartItem[i].imgPath}"
+                class="shop-item-image">
+    
+            <div class="shop-item-details">
+                <h3 class="item-title">${cartItem[i].name}</h3>
+            </div>
+            <span class="price"></span>
+            <span class="quantity-container">
+                <button name="decrement">-</button> 
+           <input style="width:30px" value="${cartItem[i].quantity}" name="quantity">
+                <button name="increment">+</button>
+           </span>
+           <span class="delete"><img src="./imgs/remove.png" class="remove-icon"></span>`
+        )
+        let shop_item = document.createElement("div");
+        shop_item.classList.add("shop-item");
+        shop_item.innerHTML = productNeedToRenderList[i];
+        const PHX = contentContainer.appendChild(shop_item);
+        // init other productList
+    }
+}
+
+
+function updateCost(cart, quantity) {
     let cost = document.querySelectorAll('.shop-item .price');
     cost.forEach(function (itemPrice, keyNumber) {
-        let totalCost = parseFloat(productList[keyNumber].cost) * parseFloat(quantity[keyNumber].value);
-
+        let totalCost = parseFloat(cart.item[keyNumber].Price) * parseFloat(quantity[keyNumber].value);
         /* nếu ko có giá trị gì thì nó bằng 0 */
         if (isNaN(totalCost)) {
             itemPrice.innerText = 0;
@@ -57,46 +103,5 @@ function ready() {
         else {
             itemPrice.innerText = totalCost;
         }
-
     })
-    /* Delete table data */
-    let deleteBtn = document.querySelectorAll('.delete');
-    deleteBtn.forEach(function (button, keyNumber) {
-        button.addEventListener('click', function (event) {
-            var buttonClicked = event.target;
-            buttonClicked.parentElement.parentElement.remove();
-
-            /* update LocalStorage after remove rows */
-            window.localStorage.removeItem(productList[keyNumber].QuantityPath)
-            window.localStorage.removeItem(productList[keyNumber].pricePath)
-            console.log(productList[keyNumber].pricePath)
-        })
-    })
-}
-
-
-function RenderElement(productList, contentContainer) {
-    let productNeedToRenderList = [];
-    for (let i in productList) {
-        productNeedToRenderList.push(`
-            <img src="${productList[i].pathImage}"
-                class="shop-item-image">
-    
-            <div class="shop-item-details">
-                <h3 class="item-title">${productList[i].name}</h3>
-            </div>
-            <span class="price"></span>
-            <span class="quantity-container">
-                <button name="decrement">-</button> 
-           <input style="width:30px" value="1" name="quantity"></input>
-                <button name="increment">+</button>
-           </span>
-           <span class="delete"><img src="${productList[i].deleteBtn}" alt="" class="remove-icon"></span>`
-        )
-        let shop_item = document.createElement("div");
-        shop_item.classList.add("shop-item");
-        shop_item.innerHTML = productNeedToRenderList[i];
-        const PHX = contentContainer.appendChild(shop_item);
-        // init other productList
-    }
 }
