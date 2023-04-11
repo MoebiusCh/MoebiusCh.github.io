@@ -11,8 +11,7 @@ function ready() {
     const cart = {
         item: []
     }
-    cart.item = [...JSON.parse(localStorage.getItem('Cart'))]
-    console.log(cart.item[0])
+    cart.item = [...JSON.parse(localStorage.getItem('Cart'))];
 
     /*  Render Element Shopping Cart*/
     RenderElement(cart.item, contentContainer);
@@ -27,16 +26,20 @@ function ready() {
     deleteBtn.forEach(function (button, keyNumber) {
         button.addEventListener('click', function (event) {
             var buttonClicked = event.target;
-            var titleProduct = document.querySelector('.item-title').innerText;
-
+            var titleProduct = buttonClicked.parentElement.parentElement.querySelector('.item-title').innerText;
             buttonClicked.parentElement.parentElement.remove();
             /* update LocalStorage after remove rows */
             /* should update by use data from cart Item */
 
-            localStorage.removeItem("Quantity_" + titleProduct);
-
-            cart.item.splice(keyNumber, 1);
+            for (let index in cart.item) {
+                if (cart.item[index].name == titleProduct) {
+                    cart.item.splice(index, 1);
+                }
+            }
             localStorage.setItem("Cart", JSON.stringify(cart.item));
+
+            localStorage.removeItem("Quantity_" + titleProduct);
+            // location.reload();
         })
     })
 }
