@@ -7,6 +7,9 @@ let cost = document.querySelector('.price .cost');
 let InputQuantityProduct = parseFloat(quantityProduct.value);
 let totalQuantityProduct = 0;
 
+let ProductDetails = document.querySelector('.rows-1 .details');
+let ProductTitle = ProductDetails.querySelector('.title').innerText;
+
 const path = location.pathname;
 const fileName = path.slice(path.lastIndexOf("/") + 1, path.lastIndexOf(".html"));
 
@@ -23,7 +26,7 @@ window.addEventListener('load', () => {
 })
 function getValueFromLocalStorage() {
     /* lấy value of key Storage */
-    const valueOfKeyStorage = localStorage.getItem(ObjNamingKey.Quantity + fileName);
+    const valueOfKeyStorage = localStorage.getItem(ObjNamingKey.Quantity + ProductTitle);
     if (valueOfKeyStorage != undefined) {
         totalQuantityProduct = parseFloat(valueOfKeyStorage);
     }
@@ -34,7 +37,6 @@ function getValueFromLocalStorage() {
     Cart.item = [...cartFromLocalStorage];
 
     console.log(Cart.item);
-
 }
 quantityProduct.addEventListener('change', () => {
     let choose = "Typing";
@@ -80,29 +82,26 @@ function UpdateQuantityProduct(choose) {
 
 function setLocalStorage() {
 
-    console.log('Cart Item: ', Cart.item);
     console.log('TotalQuantity: ', totalQuantityProduct);
 
-    localStorage.setItem(ObjNamingKey.Quantity + fileName, totalQuantityProduct);
-    localStorage.setItem(ObjNamingKey.Cost + fileName, cost.innerText);
+    localStorage.setItem(ObjNamingKey.Quantity + ProductTitle, totalQuantityProduct);
+    // localStorage.setItem(ObjNamingKey.Cost + ProductTitle, cost.innerText);
     localStorage.setItem('Cart', JSON.stringify(Cart.item));
 }
 
 function updateCartItem() {
-    var ProductDetails = document.querySelector('.rows-1 .details');
-    var ProductTitle = ProductDetails.querySelector('.title').innerText;
     var ImagePath = document.querySelector('.flex-item .product-thumb').src;
     var Cost = document.querySelector('.price .cost').innerText;
-    var flag = true;
+    var checkExitsProducts = true;
     // Trùng Item => tăng Quantity 
     for (let key in Cart.item) {
         if (Cart.item[key].name == ProductTitle) {
             Cart.item[key].quantity = totalQuantityProduct;
-            flag = false;
+            checkExitsProducts = false;
         }
     }
     // K trùng => thêm Item
-    if (flag) {
+    if (checkExitsProducts) {
         Cart.item.push({ name: ProductTitle, imgPath: ImagePath, quantity: totalQuantityProduct, Price: parseFloat(Cost) });
     }
 }
