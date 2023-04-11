@@ -10,8 +10,8 @@ let totalQuantityProduct = 0;
 let ProductDetails = document.querySelector('.rows-1 .details');
 let ProductTitle = ProductDetails.querySelector('.title').innerText;
 
-// const path = location.pathname;
-// const fileName = path.slice(path.lastIndexOf("/") + 1, path.lastIndexOf(".html"));
+const path = location.pathname;
+const fileName = path.slice(path.lastIndexOf("/") + 1, path.lastIndexOf(".html"));
 
 const ObjNamingKey = {
     Quantity: "Quantity_",
