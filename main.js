@@ -65,3 +65,17 @@ window.addEventListener("load", function () {
         }
     }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const productItem = document.querySelectorAll('.product-item img');
+    productItem.forEach((item) => {
+        item.addEventListener('mouseover', (event) => {
+            item.style.boxShadow = '5px 5px 30px cyan'
+            item.style.transform = 'translate(-10px, -10px)'
+        })
+        item.addEventListener('mouseout', (event) => {
+            item.style.boxShadow = ''
+            item.style.transform = ''
+        })
+    })
+})

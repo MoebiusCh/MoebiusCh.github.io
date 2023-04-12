@@ -78,8 +78,6 @@ function updateCost(cart, quantity) {
             itemPrice.innerText = 0;
             return;
         }
-        else {
-            itemPrice.innerText = totalCost;
-        }
+        itemPrice.innerText = totalCost;
     })
 }
