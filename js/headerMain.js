@@ -37,3 +37,12 @@ footer.innerHTML = `
             </ul>
         </div>
 `;
+
+const head = document.querySelector('head');
+
+const favicon = document.createElement('link');
+favicon.rel = "icon";
+favicon.href = "https://wise.com/public-resources/assets/icons/wise-personal/favicon.png";
+favicon.type = "image/x-icon";
+
+head.appendChild(favicon);
