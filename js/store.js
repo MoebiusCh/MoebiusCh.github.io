@@ -40,6 +40,7 @@ function ready() {
 
             localStorage.removeItem("Quantity_" + titleProduct);
             // location.reload();
+            updateCost(cart, quantity)
         })
     })
 }
@@ -56,9 +57,9 @@ function RenderElement(cartItem, contentContainer) {
             </div>
             <span class="price"></span>
             <span class="quantity-container">
-                <button name="decrement">-</button> 
-           <input style="width:30px" value="${cartItem[i].quantity}" name="quantity">
-                <button name="increment">+</button>
+            <!--  <button name="decrement">-</button> -->
+           <input type="number" style="width:30px" value="${cartItem[i].quantity}" name="quantity">
+            <!--  <button name="increment">+</button> -->
            </span>
            <span class="delete"><img src="./imgs/remove.png" class="remove-icon"></span>`
         )
@@ -80,4 +81,20 @@ function updateCost(cart, quantity) {
         }
         itemPrice.innerText = totalCost;
     })
+    /* Tính tổng */
+    let Sum = document.querySelectorAll('.Total-Price .container p');
+    let Tong = 0;
+    for (let i in cart.item) {
+        Tong += parseFloat(cost[i].innerText);
+    }
+    console.log(Sum);
+    Sum[0].innerHTML = "Tổng Tiền cần thanh toán là: ";
+    Sum[0].style.color = "white";
+    Sum[0].style.padding = "40px"
+
+    Sum[1].innerHTML = Tong + " Đ";
+    Sum[1].style.color = "white";
+    Sum[1].style.padding = "40px"
+
 }
+

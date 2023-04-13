@@ -77,6 +77,10 @@ body {
     border-radius: 10px;
 }
 
+.right-menu div.item img {
+    width: 16px;
+}
+
 .right-menu div.item:hover {
     background-color: rgba(100, 100, 111, 0.2);
 }
@@ -207,7 +211,7 @@ body {
 }
 
 footer {
-    margin-top: 50px;
+    margin-top: 10px;
     background-color: #222222;
     color: white;
 

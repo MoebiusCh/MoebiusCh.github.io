@@ -12,6 +12,10 @@ Header.innerHTML = `<div class="left-menu menu">
     <div class="Shopping-Cart item">
         <a href="../../store.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
     </div>
+    <div class="Shopping-Cart item">
+        <a href="../buy_page.html"><img src="../../imgs/fast-delivery.png"></a>
+    </div>
+    
     <div class="DangNhap item"><a href="../../DangNhap.html">Đăng nhập</a></div>
 </div>
 </nav>`;
@@ -44,3 +48,4 @@ favicon.href = "https://wise.com/public-resources/assets/icons/wise-personal/fav
 favicon.type = "image/x-icon";
 
 head.appendChild(favicon);
+
