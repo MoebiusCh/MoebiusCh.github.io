@@ -1,0 +1,34 @@
+.slide {
+    position: relative;
+    text-align: center;
+}
+
+.slide .fa-angle-left {
+    position: absolute;
+    left: 10px;
+    top: 45%;
+    font-size: 2rem;
+    color: white;
+}
+
+.slide .fa-angle-right {
+    position: absolute;
+    right: 10px;
+    top: 45%;
+    font-size: 2rem;
+    color: white;
+}
+
+.slide .list {
+    position: absolute;
+    bottom: 5%;
+    font-size: 1rem;
+    text-align: center;
+    left: calc(50% - 40px);
+    color: white;
+}
+
+.slide .list .fa-circle {
+    margin: 0 5px;
+    cursor: pointer;
+}

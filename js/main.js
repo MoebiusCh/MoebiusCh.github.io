@@ -93,3 +93,37 @@ document.addEventListener('mouseup', dragStop);
 carousel.addEventListener('scroll', infiniteScroll);
 carousel.addEventListener('mouseenter', () => clearTimeout(timeoutId));
 carousel.addEventListener('mouseleave', autoPlay);
+
+/* Slide Banner */
+var hinh = [
+    "./imgs/banner-1.jpg",
+    "./imgs/banner-2.jpg",
+    "./imgs/banner-3.jpg"
+];
+var index = 0;
+document.querySelector(".list #c0 i").style.color = "black";
+function prev() {
+    index--;
+    if (index < 0) {
+        index = hinh.length - 1;
+    }
+    document.querySelector(".hero").src = hinh[index];
+    document.querySelector(".list #c0 i").style.color = "white";
+    document.querySelector(".list #c1 i").style.color = "white";
+    document.querySelector(".list #c2 i").style.color = "white";
+    document.querySelector(`.list #c${index} i`).style.color = "black";
+}
+function next() {
+    index++;
+    if (index == hinh.length) {
+        index = 0;
+    }
+    document.querySelector(".hero").src = hinh[index];
+    document.querySelector(".list #c0 i").style.color = "white";
+    document.querySelector(".list #c1 i").style.color = "white";
+    document.querySelector(".list #c2 i").style.color = "white";
+    document.querySelector(`.list #c${index} i`).style.color = "black";
+}
+setInterval(next, 2000);
+
+document.querySelector(".list c0 i").style.color = "black";

@@ -18,11 +18,11 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@700&display=swap" rel="stylesheet">
 
     <!-- My Style -->
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/banner.css">
     <!-- My script -->
     <script type="module" src="./js/main.js" defer></script>
 </head>
@@ -68,7 +68,14 @@
                     <div class="hero"></div>
                 </div> -->
                 <div class="slide">
-                    <img src="./imgs/banner-1.jpg" alt="" class="hero">
+                    <img src="./imgs/banner-1.jpg" alt="" class="hero" width="100%" height="400px">
+                    <i class="fa fa-angle-left" aria-hidden="true" onclick="prev();"></i>
+                    <i class="fa fa-angle-right" aria-hidden="true" onclick="next();"></i>
+                    <div class="list">
+                        <span id="c0"><i class="fa-solid fa-circle" style="color: #ffffff;"></i></span>
+                        <span id="c1"><i class="fa-solid fa-circle" style="color: #ffffff;"></i></span>
+                        <span id="c2"><i class="fa-solid fa-circle" style="color: #ffffff;"></i></span>
+                    </div>
                 </div>
 
             </section>
