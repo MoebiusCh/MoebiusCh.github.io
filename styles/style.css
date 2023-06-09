@@ -39,7 +39,7 @@ body {
 
 .rows {
     width: var(--width-content);
-    margin: auto;
+    margin: 20px auto;
 }
 
 h1,
@@ -129,15 +129,25 @@ h6 {
     }
 
     main {
-        display: grid;
+        /* display: grid;
         grid-template-rows: auto;
-        row-gap: 1rem !important;
+        row-gap: 1rem !important; */
     }
 
-    /* .banner-img {
+    /* .hero {
         height: 95px !important;
         position: relative;
     } */
+
+    #banner .slide {
+        max-width: 100%;
+    }
+
+    #banner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
     .place-ticket {
         grid-template-columns: 1fr !important;
@@ -156,9 +166,17 @@ h6 {
 
         margin: 3px;
 
-        color: #15284a;
-        border: 1px solid #c7d6f5;
         border-radius: 5px;
+
+    }
+
+    .row-1 ul li {
+        width: 100%;
+    }
+
+    .row-1 ul li span {
+        width: 100%;
+        display: block;
     }
 
     .row-2 .title {
@@ -212,6 +230,17 @@ h6 {
         margin: 0 auto;
     }
 
+    footer .map iframe {
+        width: 100%;
+    }
+
+    .footer-row-2 {
+        display: block;
+    }
+
+    .social-box {
+        margin: 0 !important;
+    }
 }
 
 /* responsive for tablet */
@@ -361,7 +390,6 @@ h6 {
 #wrapper {
     max-width: 100%;
     margin: 0 auto;
-    position: relative;
 }
 
 /* Header */
@@ -452,21 +480,30 @@ nav#navbar-res {
 /* Start Main */
 
 main {
-    display: grid;
+    /*   display: grid;
     grid-template-rows: auto;
-    row-gap: 20px;
-    margin-bottom: 50px;
+    row-gap: 20px; */
+    margin-bottom: 20px auto;
 }
 
-.banner-img {
-    background-image: url(https://www.vietnambooking.com/wp-content/uploads/2023/01/bao-sale-mua-he-020623023.png);
-    height: 250px;
+/* banner */
+#banner .slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    /* background-image: url(https://www.vietnambooking.com/wp-content/uploads/2023/01/bao-sale-mua-he-020623023.png); */
+    /* height: 500px; */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
+
 }
 
 .row-1 {
+    margin: 20px auto;
     box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
     padding: 10px;
 }
@@ -602,9 +639,11 @@ main {
     font-size: 16px;
 
     position: relative;
+    margin: 0 auto;
 }
 
-.customer-card i {
+.customer-card i#left-arr,
+.customer-card i#right-arr {
     height: 50px;
     width: 50px;
     background-color: #fff;
@@ -619,12 +658,11 @@ main {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-/* customer-card = wrapper */
-.customer-card i:first-child {
+.customer-card i#left-arr:first-child {
     left: -22px;
 }
 
-.customer-card i:last-child {
+.customer-card i#right-arr:last-child {
     right: -22px;
 }
 
@@ -649,6 +687,10 @@ main {
     justify-content: center;
 }
 
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
 .carousel.dragging {
     scroll-snap-type: none;
     scroll-behavior: auto;
@@ -667,7 +709,7 @@ main {
     border-radius: 8px;
     display: flex;
     cursor: pointer;
-    padding-bottom: 15px;
+    padding: 15px 0;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -691,7 +733,7 @@ main {
 .card h2 {
     font-weight: 500;
     font-size: 1.56em;
-    margin: 30px 0 5px;
+    margin: 10px 0 5px;
 }
 
 .card span {
@@ -699,15 +741,32 @@ main {
     font-size: 1.31em;
 }
 
+.card .star i {
+    color: rgb(237, 197, 68);
+}
+
+.card p:last-child {
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+}
+
 /* End Main */
 
 
 /* Start Footer */
 footer {
-    padding: 50px 0;
+    padding: 20px 0;
     background-color: #0C121C;
     font-size: 1.6rem;
     width: 100%;
+    color: white;
+}
+
+footer h2 {
+    text-decoration: underline;
+    margin: 15px auto;
+    text-transform: uppercase;
 }
 
 footer .address {
@@ -744,6 +803,19 @@ footer .address i {
     row-gap: var(--grid-gap-footer);
 
     grid-area: Address;
+}
+
+.social-item i {
+    font-size: 5rem;
+    margin-right: 20px;
+}
+
+.social-item {
+    text-align: left;
+}
+
+footer .social-box {
+    margin-left: 10%;
 }
 
 /* End Footer */
