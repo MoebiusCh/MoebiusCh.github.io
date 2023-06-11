@@ -101,7 +101,7 @@ var hinh = [
     "./imgs/banner-3.jpg"
 ];
 var index = 0;
-document.querySelector(".list #c0 i").style.color = "black";
+document.querySelector(".list #c0 i").style.color = "#1598d4";
 function prev() {
     index--;
     if (index < 0) {
@@ -111,7 +111,7 @@ function prev() {
     document.querySelector(".list #c0 i").style.color = "white";
     document.querySelector(".list #c1 i").style.color = "white";
     document.querySelector(".list #c2 i").style.color = "white";
-    document.querySelector(`.list #c${index} i`).style.color = "black";
+    document.querySelector(`.list #c${index} i`).style.color = "#1598d4";
 }
 function next() {
     index++;
@@ -122,7 +122,7 @@ function next() {
     document.querySelector(".list #c0 i").style.color = "white";
     document.querySelector(".list #c1 i").style.color = "white";
     document.querySelector(".list #c2 i").style.color = "white";
-    document.querySelector(`.list #c${index} i`).style.color = "black";
+    document.querySelector(`.list #c${index} i`).style.color = "#1598d4";
 }
 setInterval(next, 2000);
 
