@@ -66,7 +66,7 @@ const autoPlay = () => {
     if (window.innerWidth < 800) return; // Return if window width is smaller than 800
     timeoutId = setTimeout(() => {
         carousel.scrollLeft += firstCardWidth;
-    }, 2500);
+    }, 1000);
 }
 autoPlay();
 
@@ -91,8 +91,8 @@ carousel.addEventListener('mousedown', dragStart)
 carousel.addEventListener('mousemove', dragging);
 document.addEventListener('mouseup', dragStop);
 carousel.addEventListener('scroll', infiniteScroll);
-carousel.addEventListener('mouseenter', () => clearTimeout(timeoutId));
-carousel.addEventListener('mouseleave', autoPlay);
+// carousel.addEventListener('mouseenter', () => clearTimeout(timeoutId));
+// carousel.addEventListener('mouseleave', autoPlay);
 
 /* Slide Banner */
 var hinh = [
